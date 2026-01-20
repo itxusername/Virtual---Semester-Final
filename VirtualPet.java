@@ -30,4 +30,23 @@ public class VirtualPet
                "Weight: " + weight + "g\n" +
                "Age: " + ageMonths + " months and " + ageYears + " years";
     }
+    
+    public void feed()
+    {
+        if (energyLevel < 10)
+        {
+            energyLevel++;
+        }
+        weight++;
+    }
+
+    public int getEnergyLevel()
+    {
+        return energyLevel;
+    }
+
+    public int getHappinessLevel()
+    {
+        return happinessLevel;
+    }
 }
