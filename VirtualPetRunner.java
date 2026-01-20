@@ -1,9 +1,7 @@
 import java.util.Scanner;
-/* remove comment for part C
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-*/
 
 public class VirtualPetRunner
 {
@@ -42,13 +40,11 @@ public class VirtualPetRunner
         
     VirtualPet myPet = new VirtualPet("DOG");
        
-    /*  Remove comment for part C
     // Sets up a ScheduledExecutorService object that will call updateStatus
     // every 1 minute.
     ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
     scheduler.scheduleAtFixedRate(() -> { myPet.updateStatus(); },  
              INTERVAL_IN_SECONDS, INTERVAL_IN_SECONDS, TimeUnit.SECONDS);
-    */
 
     System.out.println(myPet);
     printPet("ᵔ");
@@ -61,18 +57,15 @@ public class VirtualPetRunner
         System.out.println(myPet);
       }
       else if (choice == 2)
-      {   /* remove comment for part B
+      {
         myPet.feed();
         System.out.println("\n\nYou have fed " + myPet.getName());
-      */
       }
       else if (choice == 3)
-      {   /* remove comment for part C
+      {
         myPet.play();
         System.out.println("\n\nYou have played with " + myPet.getName());
-        */                     
        }
-       /* remove comment for part B
        if (myPet.getEnergyLevel() >= 5  && myPet.getHappinessLevel() >= 5)
        {
          printPet("ᵕ");
@@ -81,13 +74,10 @@ public class VirtualPetRunner
        {
          printPet("ᵔ");
        }
-       */
            
        System.out.println(myPet.getName().toUpperCase());
        choice = getChoice(input);
      }
-     /* remove comment for part C
      scheduler.shutdown();
-     */
   }
 }

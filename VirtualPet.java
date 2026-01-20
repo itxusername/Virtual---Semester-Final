@@ -49,4 +49,36 @@ public class VirtualPet
     {
         return happinessLevel;
     }
+
+    public void play()
+    {
+        if (happinessLevel < 10)
+        {
+            happinessLevel++;
+        }
+        if (weight > 5)
+        {
+            weight--;
+        }
+    }
+
+    public void updateStatus()
+    {
+        if (happinessLevel > 0)
+        {
+            happinessLevel--;
+        }
+        if (energyLevel > 0)
+        {
+            energyLevel--;
+        }
+
+        ageMonths++;
+        
+        if (ageMonths == 12)
+        {
+            ageYears++;
+            ageMonths = 0;
+        }
+    }
 }
