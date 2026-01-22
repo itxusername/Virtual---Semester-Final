@@ -5,24 +5,23 @@ public class VirtualPet5
     private String name;
     private int energyLevel;
     private int happinessLevel;
-    private int weight; // in grams
+    private int weight;
     private int ageYears;
     private int ageMonths;
     
-    // New features: cleanliness and sickness
-    private int cleanliness; // 0 = dirty, 10 = clean
+    private int cleanliness;
     private boolean isSick;
     private Random rand;
     
     public VirtualPet5(String petName)
     {
         name = petName;
-        energyLevel = 5; // start with some energy
-        happinessLevel = 5; // start happy
+        energyLevel = 5;
+        happinessLevel = 5;
         weight = 5;
         ageYears = 0;
         ageMonths = 0;
-        cleanliness = 10; // start clean
+        cleanliness = 10;
         isSick = false;
         rand = new Random();
     }
@@ -56,7 +55,6 @@ public class VirtualPet5
         
         weight += food.getWeightGain();
         
-        // Feeding makes pet a little dirtier
         if (cleanliness > 0) cleanliness--;
     }
     
@@ -78,7 +76,6 @@ public class VirtualPet5
         weight -= game.getWeightDecr();
         if (weight < 5) weight = 5;
         
-        // Playing makes pet dirtier
         if (cleanliness > 0) cleanliness--;
         
         return won;
@@ -94,11 +91,9 @@ public class VirtualPet5
         return happinessLevel;
     }
     
-    // NEW FEATURE 1: Clean the pet
     public void clean()
     {
         cleanliness = 10;
-        // Cleaning may slightly improve mood
         if (happinessLevel < 10) happinessLevel++;
     }
     
@@ -107,11 +102,9 @@ public class VirtualPet5
         return cleanliness;
     }
     
-    // NEW FEATURE 2: Give medicine to cure sickness
     public void giveMedicine()
     {
         isSick = false;
-        // Medicine gives a small energy boost
         if (energyLevel < 10) energyLevel++;
     }
     
@@ -122,11 +115,8 @@ public class VirtualPet5
     
     public void updateStatus()
     {
-        // Decrease happiness and energy
         if (happinessLevel > 0) happinessLevel--;
         if (energyLevel > 0) energyLevel--;
-
-        // Age increases
         ageMonths++;
         if (ageMonths == 12)
         {
@@ -134,16 +124,14 @@ public class VirtualPet5
             ageMonths = 0;
         }
         
-        // Random chance to get dirty
         if (rand.nextInt(3) == 0 && cleanliness > 0)
         {
             cleanliness--;
         }
         
-        // Random chance to get sick (more likely if dirty or low energy)
         if (!isSick)
         {
-            int sicknessChance = 5; // base 5% chance
+            int sicknessChance = 5;
             if (cleanliness < 5) sicknessChance += 10;
             if (energyLevel < 3) sicknessChance += 10;
             
@@ -153,7 +141,6 @@ public class VirtualPet5
             }
         }
         
-        // If sick, energy drops faster
         if (isSick && energyLevel > 0)
         {
             energyLevel--;
