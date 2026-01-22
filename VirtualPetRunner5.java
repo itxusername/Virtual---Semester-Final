@@ -3,7 +3,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class VirtualPetRunner4
+public class VirtualPetRunner5
 {
     // Prints out menu and returns user choice
     public static int getChoice(Scanner input)
@@ -72,7 +72,7 @@ public class VirtualPetRunner4
         // Sets up Scanner for user input
         Scanner input = new Scanner(System.in);
         
-        VirtualPet4 myPet = new VirtualPet4("Coco");
+        VirtualPet5 myPet = new VirtualPet5("Coco");
         
         // Instantiates Food objects
         Food apple = new Food("Apple", 2, 1, 1); 
