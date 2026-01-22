@@ -3,15 +3,15 @@ import java.util.Random;
 public class Game
 {
     private String name;
-    private int happinessIncr;
-    private int weightDecr;
+    private int happinessIncrease;
+    private int weightDecrease;
     private Random rand;
     
-    public Game(String name, int happinessIncr, int weightDecr)
+    public Game(String name, int happinessIncrease, int weightDecrease)
     {
         this.name = name;
-        this.happinessIncr = happinessIncr;
-        this.weightDecr = weightDecr;
+        this.happinessIncrease = happinessIncrease;
+        this.weightDecrease = weightDecrease;
         this.rand = new Random();
     }
     
@@ -22,12 +22,12 @@ public class Game
     
     public int getHappinessIncr()
     {
-        return happinessIncr;
+        return happinessIncrease;
     }
     
     public int getWeightDecr()
     {
-        return weightDecr;
+        return weightDecrease;
     }
     
     public boolean isWinner()
