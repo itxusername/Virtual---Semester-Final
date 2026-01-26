@@ -4,7 +4,7 @@ public class VirtualPet5
 {
     private String name;
     private int energyLevel;
-    private int happinessLevel;
+    private int happinessLevel;tg
     private int weight;
     private int ageYears;
     private int ageMonths;

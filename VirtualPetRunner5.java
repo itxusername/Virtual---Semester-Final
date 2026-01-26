@@ -72,7 +72,7 @@ public class VirtualPetRunner5
         // Sets up Scanner for user input
         Scanner input = new Scanner(System.in);
         
-        VirtualPet5 myPet = new VirtualPet5("Coco");
+        VirtualPet5 myPet = new VirtualPet5("Dog");
         
         // Instantiates Food objects
         Food apple = new Food("Apple", 2, 1, 1); 
