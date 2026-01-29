@@ -50,7 +50,7 @@ public class VirtualPet5
                         "║ Cleanliness:" + String.format("%-25s", cleanlinessBar) + "║\n" +
                         "║ Weight:     " + String.format("%-25s", weight + "g") + "║\n" +
                         "║ Health:     " + String.format("%-25s", healthStatus) + "║\n" +
-                        "║ Age:        " + String.format("%-25s", ageYears + "years " + ageMonths + "months") + "║\n" +
+                        "║ Age:        " + String.format("%-25s", ageYears + " years " + ageMonths + " months") + "║\n" +
                         "╚════════════════════════════════════════╝\n";
         return status;
     }
