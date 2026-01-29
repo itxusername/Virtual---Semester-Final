@@ -11,13 +11,19 @@ public class VirtualPetRunner5
       int selection = 0;
       while (selection < 1 || selection > 4)
       {
-         System.out.println("------Virtual Pet Menu------");
-         System.out.println("1. Get Pet Information");
-         System.out.println("2. Feed Pet" );
-         System.out.println("3. Play with Pet" );
-         System.out.println("4. Quit" );
-         System.out.print("Enter your choice ..... ");
+         System.out.println("\n╔════════════════════════════════════════╗");
+         System.out.println("║   🐾 VIRTUAL PET MAIN MENU 🐾   ║");
+         System.out.println("╠════════════════════════════════════════╣");
+         System.out.println("║  1. ℹ️  Get Pet Information      ║");
+         System.out.println("║  2. 🍎 Feed Pet                 ║");
+         System.out.println("║  3. 🎮 Play with Pet            ║");
+         System.out.println("║  4. 👋 Quit                     ║");
+         System.out.println("╚════════════════════════════════════════╝");
+         System.out.print("➤ Enter your choice: ");
          selection = input.nextInt();
+         if (selection < 1 || selection > 4) {
+            System.out.println("❌ Invalid choice! Please enter 1-4.");
+         }
       }
       return selection;
     }
@@ -28,13 +34,20 @@ public class VirtualPetRunner5
       int selection = 0;
       while (selection < 1 || selection > 5)
       {
-        System.out.println("------Pantry Inventory------");
-        System.out.println("1. Apple");
-        System.out.println("2. Cupcake" );
-        System.out.println("3. Broccoli" );
-        System.out.println("4. Potato");
-        System.out.println("5. Return to Menu" );
+        System.out.println("\n╔════════════════════════════════════════╗");
+        System.out.println("║   🥘 PANTRY INVENTORY 🥘        ║");
+        System.out.println("╠════════════════════════════════════════╣");
+        System.out.println("║  1. 🍎 Apple                   ║");
+        System.out.println("║  2. 🧁 Cupcake                 ║");
+        System.out.println("║  3. 🥦 Broccoli                ║");
+        System.out.println("║  4. 🥔 Potato                  ║");
+        System.out.println("║  5. ↩️  Return to Menu          ║");
+        System.out.println("╚════════════════════════════════════════╝");
+        System.out.print("➤ Enter your choice: ");
         selection = input.nextInt();
+        if (selection < 1 || selection > 5) {
+           System.out.println("❌ Invalid choice! Please enter 1-5.");
+        }
       }
       return selection;
 
@@ -46,12 +59,19 @@ public class VirtualPetRunner5
       int selection = 0;
       while (selection < 1 || selection > 4)
       {
-        System.out.println("------Game Options------");
-        System.out.println("1. Coin Toss");
-        System.out.println("2. Hoop Jumping" );
-        System.out.println("3. Simon Says" );
-        System.out.println("4. Return to Menu" );
+        System.out.println("\n╔════════════════════════════════════════╗");
+        System.out.println("║   🎯 GAME OPTIONS 🎯            ║");
+        System.out.println("╠════════════════════════════════════════╣");
+        System.out.println("║  1. 🪙 Coin Toss                ║");
+        System.out.println("║  2. 🏀 Hoop Jumping             ║");
+        System.out.println("║  3. 🧠 Simon Says               ║");
+        System.out.println("║  4. ↩️  Return to Menu          ║");
+        System.out.println("╚════════════════════════════════════════╝");
+        System.out.print("➤ Enter your choice: ");
         selection = input.nextInt();
+        if (selection < 1 || selection > 4) {
+           System.out.println("❌ Invalid choice! Please enter 1-4.");
+        }
       }
       return selection;
     }
